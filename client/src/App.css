@@ -110,7 +110,24 @@ body{
 }
 .container__hello{
   right: 0;
+  transition: right 0.5s;
 }
 .container__welcome{
   z-index: -1;
+  right: 0;
+  left: 50%;
+  transition: left 0.5s;
+}
+.container__welcome.open{
+  left: 0;
+  z-index: 999;
+}
+.container__hello.close{
+  z-index: -1;
+  left: 0;
+  right: 50%;
+}
+.container__hello.open{
+  z-index: 999;
+  right: 0;
 }

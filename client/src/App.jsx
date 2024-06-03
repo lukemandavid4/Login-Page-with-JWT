@@ -1,9 +1,18 @@
+import { useState } from 'react';
 import './App.css'
 import { FaFacebookF } from "react-icons/fa";
 import { FaGooglePlusG } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
 const App = () => {
+  const [open, setOpen] = useState(false)
+  const handleClick = () =>{
+    setOpen(!open)
+  }
+  // const [close, setClose] = useState(false)
+  // const triggerClick = () =>{
+  //   setClose(!close)
+  // }
   return (
     <div className='container'>
       <form className="container__signin">
@@ -32,15 +41,15 @@ const App = () => {
         <input type="password" name="password" id="password" placeholder='Password'/>
         <button type='submit'>SIGN UP</button>
       </form>
-      <div className="container__hello">
+      <div className={`container__hello  ${open ? 'close' : 'open'}`}>
         <h1>Hello, Friend</h1>
         <p>Enter your personal details and start your journey with us</p>
-        <button>SIGN UP</button>
+        <button onClick={handleClick}>SIGN UP</button>
       </div>
-      <div className="container__welcome">
+      <div className={`container__welcome ${open ? 'open' : 'close'}`} >
         <h1>Welcome Back!</h1>
         <p>To keep connected with us please login with your personal info</p>
-        <button>SIGN IN</button>
+        <button onClick={handleClick}>SIGN IN</button>
       </div>
     </div>
   )
