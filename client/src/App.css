@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.06);
+}
+.container{
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  display: flex;
+  width: 50rem;
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+}
+.container__signin, .container__signup{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  background: #fff;
+}
+.container__signin, .container__signup{
+  padding: 5rem 2.5rem;
+  text-align: center;
+  gap: 0.5rem;
+}
+.container__signin h4, .container__signup h4{
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.container__signin--links, .container__signup--links{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.container__signin--links a, .container__signup--links a{
+  color: #000;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container__signin span, .container__signup span{
+  font-size: 0.9rem;
+}
+.container__signin input, .container__signup input{
+  width: 100%;
+  background: rgb(232, 240, 254);
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.2rem;
+}
+.container__signin #forgot{
+  color: #000;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.container__signin button, .container__signup button{
+  background: #f22f0a;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 100vw;
+  cursor: pointer;
+}
+.container__welcome, .container__hello{
+  flex-basis: 50%;
+}
+.container__hello, .container__welcome{
+  display: flex;
+  background: linear-gradient(135deg, #f22f0a, #e8252d);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  gap: 0.5rem;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+.container__hello p, .container__welcome p{
+  font-weight: 500;
+  text-align: center;
+}
+.container__hello button, .container__welcome button{
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 100vw;
+  font-weight: 500;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+.container__hello{
+  right: 0;
+}
+.container__welcome{
+  z-index: -1;
+}
