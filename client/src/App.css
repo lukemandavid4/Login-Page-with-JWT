@@ -22,6 +22,14 @@ body{
   overflow: hidden;
   position: relative;
 }
+.container__home{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 .container__signin, .container__signup{
   display: flex;
   flex-direction: column;
@@ -63,6 +71,9 @@ body{
   padding: 0.5rem 0.5rem;
   border-radius: 0.3rem;
   margin-bottom: 0.2rem;
+}
+.container__signup #span{
+  color: #ed1f11;
 }
 .container__signin #forgot{
   color: #000;
